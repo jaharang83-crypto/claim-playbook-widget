@@ -1,0 +1,11 @@
+<div id="claimWidgetRoot"></div>
+<script>
+  (async function(){
+    if(!window.ClaimDB || !window.ClaimWidget){
+      console.warn("ClaimDB/ClaimWidget not loaded. Check common code insertion.");
+      return;
+    }
+    await window.ClaimDB.init();
+    window.ClaimWidget.mount("#claimWidgetRoot");
+  })();
+</script>
